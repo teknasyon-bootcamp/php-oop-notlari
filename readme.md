@@ -801,7 +801,7 @@ test2 method in parent class
 implementation of test3 method
 ```
 
-Traitlerin metot isimleri çakırsa ne olacak? Sorun yok, çözüm var...
+Traitlerin metot isimleri çakışırsa ne olacak? Sorun yok, çözüm var...
 ```php
 trait trait1{
    public function test1(){
