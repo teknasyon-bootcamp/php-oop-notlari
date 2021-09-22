@@ -6,7 +6,7 @@ Nesne yönemli programlama genelde kısa adı olan OOP (İng. Object Oriented Pr
 
 Bu olay biz geliştiricilerin hayatını o kadar kolaylaştırıyor ki anlatırken kendimi Eminönü'nde turistlere mal satmaya çalışan esnaf gibi hissediyorum. - [@haydar](https://github.com/haydar)
 
-Bu yaklaşımı anlatırken hayvanı korkutmamak adına tümevarım tekniğini kullanacağım. :sweat_smile: Korkmayın dinozor avlamak kadar zor değil. 
+Bu yaklaşımı anlatırken hayvanı korkutmamak adına tümevarım tekniğini kullanacağım. :sweat_smile: Korkmayın dinozor avlamak kadar zor değil.  :
 
 ![](https://media.giphy.com/media/ncgNxgevNmfJ8e6VWl/giphy.gif?cid=790b7611b02e8e28a71e1e766219aafac5e4e4e9c09f43e3&rid=giphy.gif&ct=g)
 
@@ -38,13 +38,13 @@ class Animal{
 }
 ```
 
-Burada Hayvan sınıfımızı **class** anahtar kelimesiyle oluşturduk. Bu sınıfta olmasını istediğimiz özellikleri/nitelikleri yani **property**'lerimizi belirttik. Bu nitelikle yukarıda gördüğünüz gibi değişkenler veya sabitlerden olabileceği gibi başka bir sınıfın nesneleri de olabilir.  Bir de bunların başında **public** diye bir şey yazıyor, ne olduğuna sonra geleceğiz.
+Burada Hayvan sınıfımızı **class** anahtar kelimesiyle oluşturduk. Bu sınıfta olmasını istediğimiz özellikleri/nitelikleri yani **property**'lerimizi belirttik. Bu nitelikle yukarıda gördüğünüz gibi değişkenler veya sabitlerden olabileceği gibi başka bir sınıfın nesneleri de olabilir.  Bir de bunların başında **public** diye bir şey yazıyor, ne olduğuna sonra değineceğiz.
 
 ## Nesne (Object) nedir?
 
-Nesneler taslaklarımız olan sınfılarımızın örneklemidir. (İng. Instance) Daha basit bir şekilde anlatmak gerekirse oturduğunuz evin projesi sınıfsa, oturduğunuz ev sınıfın nesnesidir.Bu arada nesne ve örneklem aynı şeyi ifade ediyor. Yani instance eşittir object diyebiliriz.
+Nesneler taslaklarımız olan sınıflarımızın örneklemidir. (İng. Instance) Daha basit bir şekilde anlatmak gerekirse oturduğunuz evin projesi sınıfsa, oturduğunuz ev sınıfın nesnesidir. Bu arada nesne ve örneklem aynı şeyi ifade ediyor. Yani instance eşittir object diyebiliriz.
 
-Öncelikle **new** anahtar kelimesiyle (İng. Keyword) sınıfımızdan  nesnelerimizi oluşturabiliriz.  Nesnelerimizin property'lerine ve metotlarına **->** ve sabitlerine ise tüm nesnelerde aynı kalacağından **::** karakterleriyle erişebiliriz. 
+Öncelikle **new** anahtar kelimesiyle (İng. Keyword) sınıfımızdan nesnelerimizi oluşturabiliriz. Nesnelerimizin property'lerine ve metotlarına **->** ve sabitlerine ise tüm nesnelerde aynı kalacağından **::** karakterleriyle erişebiliriz. 
 
 
 Yukarıdaki sınıf örneğini devam ettirerek gidelim. Hayvan sınıfımızdan kuş ve köpek adında iki nesne oluşturalım. Bunlar tüm hayvan özelliklerine sahip olduklarından hayvan sınıfı içerisindeki tüm metotlara (Bir sınıfın fonksiyonlarına metot denir.) erişebilir. 
@@ -255,7 +255,7 @@ Ekran çıktsı şu şekildedir;
 B sınıfından çağrıldım
 A sınıfında çalıştım
 ```
-Sadece bir sınıftan kalıtım alınabilir ancak örnek verecek olursak Çocuk sınıfı baba sınıfı, baba sınıfını kalıtım alabilir. Yani kalıtım sırası şu olabilir; 
+Sadece bir sınıftan kalıtım alınabilir ancak örnek verecek olursak Çocuk sınıfı baba sınıfı, baba sınıfını kalıtım alabilir. Baba sınıfı da dede sınıfını kalıtım alabilir. Yani kalıtım sırası şu olabilir; 
 
 
 
@@ -446,7 +446,7 @@ class Animal{
 
     public function getSpecies() : string
     {
-        return $this->age;
+        return $this->$species;
     }
 
     public function setSpecies($species) : void
@@ -499,7 +499,7 @@ Kodumuzun ekran çıktısı şu şekildedir;
 
 ```
 Ben Köpek türündenim ve 1 yaşındayım
-Yeni Tür : 2
+Yeni Tür : At
 Yeni Yaş : 2
 Ben At türündenim ve 2 yaşındayım
 ```
